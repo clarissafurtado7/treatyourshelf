@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HTML Elements Reference</title>
+	<div class="dropdown">
+		<button class="drop">Menu</button>
+  <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="goals.html">Goals</a>
+      <a class = "active" href="wishlist.html">Wishlist</a>
+      <a href="./reviews/reviews.html">Reviews</a>
+      <a href="release_dates.html">New Releases</a>
+      <a href="myaccount.html">My Account</a>
+    </div>
+  </div>
+  <link href="zstyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<hr></hr>
+<header>
+<h1 style="font-family:Courier New"><center>Wishlist</center></h1>
+</header>
+<hr></hr>
+
+<p>Type in a book below to add to your wishlist:</p>
+  <style>
+      body {
+        background-color: #DBF9FC;
+      }
+      form {
+        width: 400px;
+        margin: auto;
+        margin-top: 100px;
+      }
+      input {
+        padding: 4px 10px;
+        border: 0;
+        font-size: 20px;
+      }
+      .search {
+        width: 75%;
+      }
+      .submit {
+        width: 70px;
+        background-color: #1c87c9;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+
+<!-- you can type in anything and it will make a list whe nyou press add new -->
+    <center>
+      <input type='text' id='user_input' />
+      <input type="button" id="add" value="Add New">
+    </center>
+    
+    <ol id="list_item">
+
+    </ol>
+  </body>
+
+ <script>
+  document.getElementById("add").onclick  = function(){
+    var node = document.createElement("Li");
+    var text = document.getElementById("user_input").value; 
+    document.getElementById("user_input").value = ""
+    var textnode = document.createTextNode(text);
+    node.appendChild(textnode);
+    document.getElementById("list_item").appendChild(node);
+  }
+</script> 
+
+</body>
+</html>

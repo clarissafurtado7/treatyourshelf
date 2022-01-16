@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+      <input type='text' id='user_input' />
+      <input type="button" id="add" value="Submit">
+    </center>
+    
+    <ol id="list_item">
+
+    </ol>
+  </body>
+
+ <script>
+  document.getElementById("add").onclick  = function(){
+    var node = document.createElement("Li");
+    var text = document.getElementById("user_input").value; 
+    document.getElementById("user_input").value = ""
+    var textnode = document.createTextNode(text);
+    node.appendChild(textnode);
+    document.getElementById("list_item").appendChild(node);
+  }
+</script> 
+
+</body>
+</html>

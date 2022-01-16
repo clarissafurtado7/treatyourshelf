@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    {
+        box-sizing: border-box;
+    }
+    .column {
+    float: left;
+    width: 20%;
+    padding: 40px;
+    }
+
+    .row::after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    </style>
+	<title>HTML Elements Reference</title>
+	<div class="dropdown">
+		<button class="drop">Menu</button>
+  <div class="nav">
+      <a href="index.html">Home</a>
+      <a href="goals.html">Goals</a>
+      <a href="./wishlist/wishlist.html">Wishlist</a>
+      <a href="./reviews/reviews.html">Reviews</a>
+      <a href="release_dates.html">New Releases</a>
+      <a class = "active" href="myaccount.html">My Account</a>
+    </div>
+  </div>
+  <link href="zstyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<hr></hr>
+<header>
+<h1 style="font-family:Courier New"><center>My Account</center></h1>
+</header>
+<hr></hr>
+<h2 style="font-family:Times New Roman; text-align:center"> HELLO, user's name!</h2> <br>
+
+
+<div class="column">
+<img style="border-radius: 50%; display: block; margin-left:auto; margin-right:auto; float:left; padding: 10px" src="images/pfp.jpg" alt="profile picture" width="200" height="200"> 
+</div>
+<div class="row">
+  <div class="column">
+<h3>ACCOUNT INFORMATION</h3> 
+<p> Name: USER'S NAME <br>
+  Email: USERNAME@gmail.com <br>
+Password: ******* <br></p>
+<a href="">Change Password</a>
+  </div>
+  <div class="column">
+    <h3>MY WISHLIST</h3> 
+<a href="wishlist.html">Add Books to my Wishlist</a>
+</div>
+  </div>
+</body>
+</html>
